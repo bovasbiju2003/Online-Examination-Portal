@@ -1,0 +1,451 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+
+body{
+
+    background:#f4f7fc;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+
+}
+
+/* Header */
+
+header{
+
+    background:#1e3a8a;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+}
+
+header h2{
+
+    font-size:28px;
+
+}
+
+.student{
+
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+#timer{
+
+    background:#dc2626;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+/* Main */
+
+main{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:40px;
+
+}
+
+/* Question Card */
+
+.question-box{
+
+    background:#fff;
+
+    width:900px;
+
+    max-width:100%;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#questionNumber{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+#questionText{
+
+    margin-bottom:30px;
+
+    color:#222;
+
+}
+
+/* Options */
+
+.option{
+
+    display:block;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.option:hover{
+
+    background:#eff6ff;
+
+    border-color:#2563eb;
+
+}
+
+.option input{
+
+    margin-right:12px;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#ffffff;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    box-shadow:0 -2px 10px rgba(0,0,0,.15);
+
+}
+
+/* Buttons */
+
+button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#previousBtn{
+
+    background:#6b7280;
+
+    color:#fff;
+
+}
+
+#previousBtn:hover{
+
+    background:#4b5563;
+
+}
+
+#nextBtn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+#nextBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+#submitBtn{
+
+    background:#16a34a;
+
+    color:#fff;
+
+}
+
+#submitBtn:hover{
+
+    background:#15803d;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.question-box{
+
+    padding:20px;
+
+}
+
+footer{
+
+    flex-direction:column;
+
+}
+
+button{
+
+    width:100%;
+
+}
+/* ==========================================
+Professional Dashboard
+========================================== */
+
+.exam-container{
+
+display:flex;
+
+gap:20px;
+
+padding:25px;
+
+align-items:flex-start;
+
+}
+
+/* Left Side */
+
+.question-area{
+
+flex:3;
+
+}
+
+/* Right Side */
+
+.palette{
+
+width:280px;
+
+background:white;
+
+padding:20px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+position:sticky;
+
+top:20px;
+
+}
+
+.palette h3{
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:#1e3a8a;
+
+}
+
+#paletteContainer{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:10px;
+
+}
+
+/* Question Buttons */
+
+.palette-btn{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+background:#d1d5db;
+
+transition:.3s;
+
+}
+
+/* Current Question */
+
+.palette-btn.active{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+/* Answered */
+
+.palette-btn.answered{
+
+background:#16a34a;
+
+color:white;
+
+}
+
+/* Progress */
+
+.progress-box{
+
+background:white;
+
+padding:20px;
+
+margin-bottom:20px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.progress-text{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:12px;
+
+font-weight:bold;
+
+}
+
+.progress-bar{
+
+height:12px;
+
+background:#ddd;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+#progressFill{
+
+height:100%;
+
+width:0%;
+
+background:#16a34a;
+
+transition:.4s;
+
+}
+
+/* Navigation */
+
+.navigation{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+@media(max-width:1000px){
+
+.exam-container{
+
+flex-direction:column;
+
+}
+
+.palette{
+
+width:100%;
+
+position:static;
+
+}
+
+}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Result</title>
+
+    <link rel="stylesheet" href="css/result.css">
+
+</head>
+
+<body>
+
+    <div class="result-container">
+
+        <div class="result-card">
+
+            <h1>🎓 Online Examination Result</h1>
+
+            <div class="student-details">
+
+                <p><strong>Student :</strong> <span id="studentName"></span></p>
+
+                <p><strong>Roll Number :</strong> <span id="rollNumber"></span></p>
+
+            </div>
+
+            <div class="score-box">
+
+                <h2>Your Score</h2>
+
+                <h1>
+
+                    <span id="score">0</span>
+
+                    /
+
+                    <span id="total">0</span>
+
+                </h1>
+
+                <h3>
+
+                    Percentage :
+
+                    <span id="percentage">0%</span>
+
+                </h3>
+
+                <h2 id="status"></h2>
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="printBtn">
+
+                    🖨 Print Result
+
+                </button>
+
+                <button id="homeBtn">
+
+                    🏠 Home
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="review-section">
+
+            <h2>Answer Review</h2>
+
+            <div id="reviewContainer"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/questions.js"></script>
+
+    <script src="js/result.js"></script>
+
+</body>
+
+</html>

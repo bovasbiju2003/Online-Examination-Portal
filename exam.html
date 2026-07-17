@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Examination System</title>
+
+    <link rel="stylesheet" href="css/exam.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-left">
+
+        <h2>Online Examination System</h2>
+
+        <div class="student-info">
+
+            <strong>Name :</strong>
+            <span id="studentName"></span>
+
+            &nbsp;&nbsp;|
+
+            &nbsp;&nbsp;
+
+            <strong>Roll :</strong>
+            <span id="rollNumber"></span>
+
+        </div>
+
+    </div>
+
+    <div class="timer-box">
+
+        <h3>Time Left</h3>
+
+        <div id="timer">30:00</div>
+
+    </div>
+
+</header>
+
+<main class="exam-container">
+
+    <!-- Question Area -->
+
+    <section class="question-area">
+
+        <!-- Progress -->
+
+        <div class="progress-box">
+
+            <div class="progress-text">
+
+                <span>Progress</span>
+
+                <span id="progressText">
+
+                    0 / 0 Answered
+
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Question -->
+
+        <div class="question-box">
+
+            <h3 id="questionNumber">
+
+                Question 1
+
+            </h3>
+
+            <h2 id="questionText">
+
+                Loading Question...
+
+            </h2>
+
+            <div id="options">
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <div class="navigation">
+
+            <button id="previousBtn">
+
+                Previous
+
+            </button>
+
+            <button id="nextBtn">
+
+                Next
+
+            </button>
+
+            <button id="submitBtn">
+
+                Submit Exam
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Palette -->
+
+    <aside class="palette">
+
+        <h3>
+
+            Question Palette
+
+        </h3>
+
+        <div id="paletteContainer">
+
+        </div>
+
+    </aside>
+
+</main>
+
+<script src="js/questions.js"></script>
+
+<script src="js/exam.js"></script>
+
+<script src="js/security.js"></script>
+
+</body>
+
+</html>

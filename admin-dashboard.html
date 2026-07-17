@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+
+            <li><a href="#">📊 Dashboard</a></li>
+
+            <li><a href="#addQuestion">➕ Add Question</a></li>
+
+            <li><a href="#questionList">📚 Question Bank</a></li>
+
+            <li><a href="#" id="exportBtn">📤 Export Questions</a></li>
+
+            <li><a href="#" id="importBtn">📥 Import Questions</a></li>
+
+            <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <h1>Online Examination System</h1>
+
+        <p>Welcome, <strong id="adminName">Admin</strong></p>
+
+        <br>
+
+        <!-- ====================================== -->
+        <!-- Dashboard Statistics -->
+        <!-- ====================================== -->
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h1 id="totalStudents">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total Questions</h3>
+                <h1 id="totalQuestions">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total Exams</h3>
+                <h1 id="totalExams">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Average Score</h3>
+                <h1 id="averageScore">0%</h1>
+            </div>
+
+            <div class="card">
+                <h3>Pass</h3>
+                <h1 id="passCount">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Fail</h3>
+                <h1 id="failCount">0</h1>
+            </div>
+
+        </section>
+
+        <!-- Secondary Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Subjects</h3>
+
+                <p>1</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Exam Status</h3>
+
+                <p>Ready</p>
+
+            </div>
+
+        </div>
+
+        <!-- Add Question -->
+
+        <div class="form-card" id="addQuestion">
+
+            <h2>Add Question</h2>
+
+            <br>
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Question">
+
+            <input
+                type="text"
+                id="option1"
+                placeholder="Option 1">
+
+            <input
+                type="text"
+                id="option2"
+                placeholder="Option 2">
+
+            <input
+                type="text"
+                id="option3"
+                placeholder="Option 3">
+
+            <input
+                type="text"
+                id="option4"
+                placeholder="Option 4">
+
+            <select id="answer">
+
+                <option value="0">Correct Answer : Option 1</option>
+
+                <option value="1">Correct Answer : Option 2</option>
+
+                <option value="2">Correct Answer : Option 3</option>
+
+                <option value="3">Correct Answer : Option 4</option>
+
+            </select>
+
+            <button class="btn btn-success" id="saveQuestion">
+
+                Save Question
+
+            </button>
+
+        </div>
+
+        <br>
+
+        <!-- Question Table -->
+
+        <div class="form-card" id="questionList">
+
+            <h2>Question Bank</h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Question</th>
+
+                        <th>Answer</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="questionTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <!-- ========================== -->
+        <!-- Student Management -->
+        <!-- ========================== -->
+
+        <div class="form-card" id="studentManagement">
+
+            <h2>👨‍🎓 Student Management</h2>
+
+            <br>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Student Name">
+
+            <input
+                type="text"
+                id="studentRoll"
+                placeholder="Roll Number">
+
+            <input
+                type="password"
+                id="studentPassword"
+                placeholder="Password">
+
+            <input
+                type="text"
+                id="studentSubject"
+                placeholder="Subject">
+
+            <select id="studentStatus">
+
+                <option value="Active">Active</option>
+
+                <option value="Blocked">Blocked</option>
+
+            </select>
+
+            <button
+                class="btn btn-success"
+                id="saveStudent">
+
+                Save Student
+
+            </button>
+
+        </div>
+
+        <br>
+
+        <div class="form-card">
+
+            <h2>📋 Student List</h2>
+
+            <br>
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search Student">
+
+            <br><br>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Roll No</th>
+
+                    <th>Subject</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <!-- ====================================== -->
+        <!-- Student Results -->
+        <!-- ====================================== -->
+
+        <section id="resultsSection">
+
+            <h2>Student Results</h2>
+
+            <input
+                type="text"
+                id="resultSearch"
+                placeholder="Search by Name or Roll Number">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Roll</th>
+
+                        <th>Subject</th>
+
+                        <th>Score</th>
+
+                        <th>Percentage</th>
+
+                        <th>Date</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="resultsTable">
+
+                </tbody>
+
+            </table>
+
+            <br>
+
+            <button id="exportResultsBtn">
+
+                Export Results
+
+            </button>
+
+        </section>
+
+        <input
+            type="file"
+            id="importFile"
+            accept=".json"
+            hidden>
+
+    </main>
+
+</div>
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+
+</html>
